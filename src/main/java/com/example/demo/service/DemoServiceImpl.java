@@ -25,6 +25,6 @@ public class DemoServiceImpl implements DemoService {
 
 	@Override
 	public EmployeeInfo getEmpInfoByName(String empName) {
-		return repository.findByEmpName(empName).orElseThrow();
+		return repository.findByEmpName(empName).orElse(new EmployeeInfo());
 	}
 }
