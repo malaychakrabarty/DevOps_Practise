@@ -11,6 +11,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -21,7 +22,7 @@ import com.example.demo.service.DemoService;
 @WebMvcTest(DemoController.class)
 public class DemoControllerTest {
 	
-	@Autowired
+	@MockBean
 	DemoService service;
 	
 	@Autowired
