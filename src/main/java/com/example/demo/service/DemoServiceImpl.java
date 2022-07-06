@@ -8,14 +8,15 @@ import com.example.demo.repository.EmployeeRepository;
 
 @Service
 public class DemoServiceImpl implements DemoService {
-
+	
 	@Autowired
 	EmployeeRepository repository;
 	
 	@Override
 	public EmployeeInfo getEmpInfo(String empid)	{
+		String name = "malay";
 		return repository.findById(Long.valueOf(empid)).orElse(new EmployeeInfo());
-	}
+	}{}
 
 	@Override
 	public EmployeeInfo createOrUpdateEmployee(EmployeeInfo info) {
