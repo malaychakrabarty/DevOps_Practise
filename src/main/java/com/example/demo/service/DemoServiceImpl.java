@@ -16,4 +16,14 @@ public class DemoServiceImpl implements DemoService {
 	public EmployeeInfo getEmpInfo(String empid)	{
 		return repository.findById(Long.valueOf(empid)).orElse(new EmployeeInfo());
 	}
+
+	@Override
+	public EmployeeInfo createOrUpdateEmployee(EmployeeInfo info) {
+		return repository.save(info);
+	}
+
+	@Override
+	public EmployeeInfo getEmpInfoByName(String empName) {
+		return repository.findByEmpName(empName).orElseThrow();
+	}
 }

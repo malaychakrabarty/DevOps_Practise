@@ -4,6 +4,10 @@ import com.example.demo.entity.EmployeeInfo;
 
 public interface DemoService {
 
-	public EmployeeInfo getEmpInfo(String empid);
+	EmployeeInfo getEmpInfo(String empid);
+	
+	EmployeeInfo getEmpInfoByName(String empName);
+	
+	EmployeeInfo createOrUpdateEmployee(EmployeeInfo info); 
 
 }
