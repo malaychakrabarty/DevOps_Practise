@@ -15,7 +15,7 @@ public class DemoController {
 	DemoService demoService;
 	
 	@GetMapping ("/getDetails")
-	public String getEmpDetails(Model model,@RequestParam(name = "empid", required = false, defaultValue = "2") String empid)	{
+	public String getEmpDetails(Model model,@RequestParam(name = "empid", required = false, defaultValue = "1") String empid)	{
 		System.out.println( "Employee ID :"+empid);
 		System.out.println(demoService.getEmpInfo(empid));
 		model.addAttribute("name", demoService.getEmpInfo(empid).getEmpName());
